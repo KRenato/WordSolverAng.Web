@@ -1,0 +1,37 @@
+.letter-box {
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 40px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.color-box {
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.color-box-grey {
+  background-color: grey;
+}
+
+.color-box-yellow {
+  background-color: yellow;
+}
+
+.color-box-green {
+  background-color: green;
+}
+
+.pattern-box {
+  vertical-align: middle;
+}

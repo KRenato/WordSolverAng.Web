@@ -1,0 +1,33 @@
+<p>
+  Welcome to KR's Word Solver! I'll give you the first word for free. Enter it
+  into your word game and see what happens. When ready, come back and click or
+  touch the pattern to submit for another word. Have fun!
+</p>
+
+<div *ngIf="!pageLoaded"><em>Loading...</em></div>
+
+<div *ngIf="pageLoaded">
+  <app-entered-word
+    *ngFor="let word of enteredWords; let last = last"
+    [enteredWord]="word"
+    [isActiveWord]="last"></app-entered-word>
+</div>
+
+<div *ngIf="!!messageText && messageText.length !== 0">{{ messageText }}</div>
+
+<div
+  *ngIf="
+    enteredWords.length < numberOfGuesses &&
+    (!messageText || messageText.length === 0)
+  "
+  class="pb-3">
+  <button class="btn btn-primary" (click)="getNextWordClicked()">
+    Get next word
+  </button>
+</div>
+
+<div>
+  <button class="btn btn-primary" (click)="startOverClicked()">
+    Start over
+  </button>
+</div>

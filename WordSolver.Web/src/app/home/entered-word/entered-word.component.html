@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <div *ngFor="let letter of getLetters(enteredWord)" class="letter-box">
+      {{ letter }}
+    </div>
+  </div>
+  <div class="pattern-box py-4">
+    <div
+      *ngFor="let pattern of enteredWord?.letterPatterns"
+      [class]="pattern.getStyle()"
+      (click)="isActiveWord && pattern.togglePattern()"></div>
+  </div>
+</div>
